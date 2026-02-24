@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
-import { Search, MapPin, User, LogOut, ChevronDown } from "lucide-react";
+import { Search, MapPin, User, LogOut, ChevronDown, CloudSun } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -28,6 +28,11 @@ const Navbar = () => {
             <span>{location}</span>
             <ChevronDown size={14} />
           </div>
+
+          <Link to="/weather" className="hidden md:flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <CloudSun size={16} />
+            <span>Weather</span>
+          </Link>
         </div>
 
         {/* Center - Search */}
