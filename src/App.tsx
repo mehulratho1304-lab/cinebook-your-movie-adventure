@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import MovieDetails from "./pages/MovieDetails";
 import SeatSelection from "./pages/SeatSelection";
 import BookingSummary from "./pages/BookingSummary";
+import WeatherPage from "./pages/WeatherPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const AppRoutes = () => {
       <Route path="/movie/:id" element={<ProtectedRoute><MovieDetails /></ProtectedRoute>} />
       <Route path="/seats/:id" element={<ProtectedRoute><SeatSelection /></ProtectedRoute>} />
       <Route path="/booking/:id" element={<ProtectedRoute><BookingSummary /></ProtectedRoute>} />
+      <Route path="/weather" element={<ProtectedRoute><WeatherPage /></ProtectedRoute>} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
